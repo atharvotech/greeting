@@ -6,15 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             box-sizing: border-box;
+            transition: .5s;
         }
+
+        h2 {
+            font-size: 40px;
+            text-align: center;
+            text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+                1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+        }
+
         table {
             background: rgb(255, 157, 0);
             color: black;
             display: block;
             width: max-content;
             margin: auto;
+            scale: 1.2;
         }
 
         a {
@@ -22,12 +32,79 @@
             color: rgb(255, 255, 255);
         }
 
-        td{
+        td {
             width: max-content;
             padding: 5px 10px;
+            text-align: center;
         }
-        td>a{
+
+        td>a {
             background: rgb(255, 123, 0);
+        }
+
+        body {
+            animation: bg 5s linear infinite;
+        }
+
+        @keyframes bg {
+            0% {
+                background-color: orange
+            }
+
+            10% {
+                background-color: purple
+            }
+
+            20% {
+                background-color: red
+            }
+
+            30% {
+                background-color: cadetblue
+            }
+
+            40% {
+                background-color: yellow;
+            }
+
+            50% {
+                background-color: coral;
+            }
+
+            60% {
+                background-color: green;
+            }
+
+            70% {
+                background-color: cyan;
+            }
+
+            80% {
+                background-color: deeppink;
+            }
+
+            90% {
+                background-color: dodgerblue
+            }
+
+            100% {
+                background-color: orange
+            }
+
+        }
+    </style>
+    <style>
+        @media only screen and (max-width:460px) {
+            
+            h2 {
+            font-size: 25px;
+            }
+            table{
+                scale: 1;
+            }
+            td{
+                padding: 2px 2px;
+            }
         }
     </style>
 </head>
@@ -48,7 +125,14 @@
                 <a href="newyear/index.html">New Year Greeting</a>
             </td>
             <td>- - - </td>
-            <td>12/30/23,11:00:00AM </td>
+            <td>12/30/23,11:00:00PM </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="holi/index.html">Holi Greeting</a>
+            </td>
+            <td>- - - </td>
+            <td>3/25/24,01:00:00PM </td>
         </tr>
     </table>
 </body>
