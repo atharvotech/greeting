@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -284,74 +285,14 @@
 
     }
   </style>
-  <style>
-    @font-face {
-      font-family: fac;
-      src: url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
-    }
-
-    .loader {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: fixed;
-      width: 100vw !important;
-      height: 100vh !important;
-      background-color: #fff;
-      z-index: 1 !important;
-    }
-
-    .loader .load-img {
-      height: 400px !important;
-      width: 600px;
-    }
-
-    .loader h2 {
-      background: linear-gradient(to right, #aeff00, #3cd2e6, rgb(144, 0, 255), rgb(255, 0, 89), #aeff00);
-      font-family: 'fac';
-      font-size: 60px;
-      font-weight: bolder;
-      width: -moz-fit-content;
-      width: fit-content;
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      animation: txt 3s linear infinite;
-    }
-
-    @keyframes txt {
-      0% {
-        background-position-x: 0%;
-      }
-
-      100% {
-        background-position-x: 200px;
-      }
-    }
-
-    .loader.loaded {
-      animation: fade 1s linear;
-      display: none;
-    }
-
-    @keyframes fade {
-      0% {
-        opacity: 1;
-      }
-
-      100% {
-        opacity: 0;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="../load.css">
 </head>
 
 <body>
-  <div class="loader">
-    <img src="../images/loader.gif" alt="" class="load-img">
-    <h2>Loading...</h2>
-  </div>
+    <div class="loader">
+      <img src="../images/loader.gif" alt="" class="load-img">
+      <h2>Loading...</h2>
+    </div>
 
   <div class="hero-image">
     <div class="hero-text">
@@ -413,6 +354,7 @@
     </div>
   </div>
 </body>
+  <script src="../load.js"></script>
 <script src="https://unpkg.com/css-doodle@0.17.2/css-doodle.min.js"></script>
 <script>
   var query_string = window.location.search;
@@ -427,13 +369,6 @@
     document.getElementsByClassName('q')[1].innerHTML = "Atharv"
   }
 </script>
-<script>
-  const body = document.querySelector('.body');
-  const loader = document.querySelector('.loader');
-  window.addEventListener("load", () => {
-    loader.classList.add('loaded');
-    loader.addEventListener("animationend", () => { body.removeChild(loader) });
-  });
-</script>
+
 
 </html>
